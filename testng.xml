@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" name="SalesOrderMgmtTest" parallel="methods">
+  <test name="Test">
+  <parameter name="persistenceUnit" value="PrototypeDB" />
+<!-- 
+  <packages>
+  	<package name="com.mystore.salesOrderMgmt" />
+  </packages>
+ -->
+    <classes>
+      <class name="com.mystore.salesOrderMgmt.SalesOrderServiceTest"/>
+      <class name="com.mystore.salesOrderMgmt.SalesOrderServiceResource"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
