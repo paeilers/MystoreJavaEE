@@ -5,6 +5,7 @@ Application Server: Glassfish 4
 JPA: EclipseLink
 REST: JAX-RS
 DBMS: MySQL
-Front-end Frameworks: AngularJS, Bootstrap
 
 NOTE: The UI layer has been created separately to confirm/support separation of concerns between the back-end and the UI. The project is in a separate repository called mystore-ui and uses AngularJS and Bootstrap.
+
+Minor change...4:26pm on 7/24
