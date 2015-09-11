@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<!--  EclipseLink NOTE: transaction-type must be set to "RESOURCE_LOCAL" for JUnit testing and "JTA" for runtime -->
+	<persistence-unit name="PrototypeDB" transaction-type="JTA">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <!-- Hibernate -->
+        <!--provider>org.hibernate.ejb.HibernatePersistence</provider-->
+ 
+        <!-- TopLink Essentials -->
+        <!--provider>oracle.toplink.essentials.PersistenceProvider</provider-->
+ 
+        <!-- Apache OpenJPA -->
+        <!--provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider-->
+ 
+        <!-- DataNucleus -->
+        <!--provider>org.datanucleus.jpa.PersistenceProviderImpl</provider-->
+
+ 		<jta-data-source>PrototypeDB</jta-data-source> 
+		<class>business.salesOrderMgmt.entity.Address</class>
+		<class>business.salesOrderMgmt.entity.Catalog</class>
+		<class>business.salesOrderMgmt.entity.CatalogItem</class>
+		<class>business.salesOrderMgmt.entity.CreditCardOnFile</class>
+		<class>business.salesOrderMgmt.entity.Item</class>
+		<class>business.salesOrderMgmt.entity.ProductCategory</class>
+		<class>business.salesOrderMgmt.entity.ProductCategoryItem</class>
+		<class>business.salesOrderMgmt.entity.SalesInvoice</class>
+		<class>business.salesOrderMgmt.entity.SalesOrder</class>
+		<class>business.salesOrderMgmt.entity.SalesOrderLine</class>
+		<class>business.salesOrderMgmt.entity.Shipment</class>
+		<class>business.salesOrderMgmt.entity.UserAccount</class>
+		<class>business.salesOrderMgmt.entity.ValidState</class>
+		<class>business.salesOrderMgmt.entity.ValidValue</class>		
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+        	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/prototype"/>
+        	<property name="javax.persistence.jdbc.user" value="root"/>
+        	<property name="javax.persistence.jdbc.password" value="Techex01"/>
+        </properties>
+	</persistence-unit>
+</persistence>
